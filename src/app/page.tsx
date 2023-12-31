@@ -64,7 +64,7 @@ export default function Home() {
     setTimeout(() => {
       setShowFireworks(false);
       setTheme(currentTheme || "system")
-    }, 3600); 
+    }, 3600000); 
   };
 
   return (
