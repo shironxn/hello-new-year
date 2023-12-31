@@ -64,7 +64,7 @@ export default function Home() {
     setTimeout(() => {
       setShowFireworks(false);
       setTheme(currentTheme || "system")
-    }, 5000); 
+    }, 3600); 
   };
 
   return (
@@ -92,7 +92,7 @@ export default function Home() {
       {!showFireworks && (
         <div className="font-bold md:text-6xl text-4xl">
           <Countdown
-            date={Date.now() + timeLeft}
+            date={Date.now() + 5000}
             onComplete={handleCountdownComplete}
           />
         </div>
