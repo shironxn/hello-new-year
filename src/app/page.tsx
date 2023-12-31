@@ -22,7 +22,7 @@ export default function Home() {
   const [currentTheme, setCurrentTheme] = useState<string | undefined>(theme);
 
   const calculateTime = (): DateTime => {
-    const now = new Date("2023-12-31T23:59:55");
+    const now = new Date();
     const currentYear = now.getFullYear();
     const nextYear = currentYear + 1;
     const newYear = new Date(`January 1, ${nextYear} 00:00:00`).getTime();
@@ -68,7 +68,7 @@ export default function Home() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-center text-center w-screen`}>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center w-screen">
       {showFireworks && (
         <div className="absolute z-2 w-screen">
           <Fireworks />
