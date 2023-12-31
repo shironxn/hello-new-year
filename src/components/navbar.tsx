@@ -29,11 +29,11 @@ const navLink: Link[] = [
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-transparent fixed z-10">
+    <div className="navbar bg-transparent fixed z-10 m-auto items-center justify-center flex">
       <div className="navbar-start"></div>
       <div className="navbar-center">
         {navLink.map((value, index) => (
-          <Link href={value.href} key={index} className="btn btn-ghost text-xl">
+          <Link href={value.href} key={index} className="btn btn-ghost md:text-xl text-lg">
             {value.title}
           </Link>
         ))}
