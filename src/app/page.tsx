@@ -37,11 +37,11 @@ export default function Home() {
   const messages: MessageList = {
     incomplete: [
       "New Year's Countdown",
-      `Goodbye ${currentYear}`,
+      `${nextYear}`,
       
     ],
     complete: [
-      `Happy New Year ${nextYear}`,
+      `Happy New Year! ${nextYear}`,
     ],
   };
   
@@ -76,7 +76,7 @@ export default function Home() {
       )}
       
       <div className="relative z-1">
-        <h1 className="md:text-xl text-xl mb-4">
+        <h1 className="md:text-3xl text-xl mb-4">
           <Typewriter
             words={message}
             loop={false}
@@ -92,7 +92,7 @@ export default function Home() {
       {!showFireworks && (
         <div className="font-bold md:text-6xl text-4xl">
           <Countdown
-            date={Date.now() + 5000}
+            date={Date.now() + timeLeft}
             onComplete={handleCountdownComplete}
           />
         </div>
